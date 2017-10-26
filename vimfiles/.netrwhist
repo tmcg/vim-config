@@ -1,0 +1,8 @@
+﻿let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='S:\Documents\Projects\Ardent\grp-database-admin\Monitoring\StatusMonitor\database'
+let g:netrw_dirhist_2='S:\Downloads\OpenGL_Superbible_Comprehensive\src\spinnycube'
+let g:netrw_dirhist_3='S:\Downloads\azure-express\app'
+let g:netrw_dirhist_4='S:/Downloads/azure-express'
+let g:netrw_dirhist_5='S:\Downloads\azure-express\app'
+let g:netrw_dirhist_6='S:\Downloads\azure-express\app/controllers'

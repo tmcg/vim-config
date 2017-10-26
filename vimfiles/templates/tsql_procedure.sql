@@ -1,0 +1,22 @@
+SET QUOTED_IDENTIFER ON
+GO
+SET ANSI_NULLS ON
+GO
+IF OBJECT_ID('dbo.SampleProc') IS NOT NULL
+BEGIN
+    DROP PROCEDURE [dbo].[SampleProc]
+END
+GO
+
+CREATE PROCEDURE [dbo].[SampleProc] 
+    @P1 INT
+    ,@P2 VARCHAR(100)
+    ,@P3 INT OUTPUT
+AS
+BEGIN
+
+END
+GO
+
+GRANT EXECUTE ON [dbo].[SampleProc] TO [SampleGroup]
+GO
