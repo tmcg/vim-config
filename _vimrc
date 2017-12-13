@@ -185,15 +185,20 @@ endfunction
 function! ConfigureAutoCommands(settings) " {{{
     " Sets Commands Executed On Entering Buffers
     " Powershell File Type detection
-    autocmd BufNewFile,BufRead *.ps1			setf ps1
+    autocmd BufNewFile,BufRead *.ps1 setf ps1
+    " WPF XAML File Type detection
+    autocmd BufNewFile,BufRead *.xaml setf xml
+
     " Sync syntax highlighting from the start of file when entering a buffer
     " autocmd BufEnter * call SyncSyntax()
 
     " Special tabstop settings for file types
-    autocmd FileType css set ts=2|set sts=2
-    autocmd FileType jade set ts=2|set sts=2
-    autocmd FileType javascript set ts=2|set sts=2
-    autocmd FileType html set ts=2|set sts=2
+    autocmd FileType cs set ts=3|set sts=3
+    autocmd FileType xml set ts=3|set sts=3
+    autocmd FileType css set ts=3|set sts=3
+    autocmd FileType jade set ts=3|set sts=3
+    autocmd FileType javascript set ts=3|set sts=3
+    autocmd FileType html set ts=3|set sts=3
 
     autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
