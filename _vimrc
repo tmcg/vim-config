@@ -271,7 +271,7 @@ function! ConfigureOptions(settings) " {{{
     set tabstop=2               " Tab width
     set shiftwidth=2            " Shift width the same as tab width for autoindenting
     set laststatus=2            " Always display the status bar
-    set listchars=tab:>-,eol:@  " List mode characters
+    set listchars=tab:>-,trail:@  " List mode characters
     set whichwrap=b,s,h,l       " Allow the 'h' and 'l' normal mode commands to wrap lines
     set foldmethod=marker       " Use fold markers as code folding aids
     set statusline=\ \ %F\ %m%r%=\[%l/%L,%2c/%v\]\ \[0x%B,0x%O\]\ [%{&fileencoding}]\ %w%h
@@ -290,6 +290,12 @@ function! ConfigureOptions(settings) " {{{
     let c_space_errors=1                    " Highlight spaces in C files
     let c_no_trail_space_error=1            " But don't highlight trailing spaces as errors
     let foldcolumn=0                        " Default to a hidden fold column
+
+    " Enable/Disable list mode
+    set nolist
+    if a:settings.ListMode
+      set list
+    endif
 
     " Create backup & swap files in the temp dir
     if a:settings.Platform == 'windows'
@@ -787,6 +793,7 @@ let cfgSettings.FontSizePrint = cfgSettings.FontSize-1
 let cfgSettings.ColorScheme = "moria/dark"
 let cfgSettings.WindowLines = 50
 let cfgSettings.WindowColumns = 130
+let cfgSettings.ListMode = 1
 
 if has('win32')||has('win64')
     let cfgSettings.Platform = 'windows'
