@@ -271,7 +271,7 @@ function! ConfigureOptions(settings) " {{{
     set tabstop=2               " Tab width
     set shiftwidth=2            " Shift width the same as tab width for autoindenting
     set laststatus=2            " Always display the status bar
-    set listchars=tab:>-,trail:@  " List mode characters
+    set listchars=tab:»·,trail:·  " Show tab and trail chars
     set whichwrap=b,s,h,l       " Allow the 'h' and 'l' normal mode commands to wrap lines
     set foldmethod=marker       " Use fold markers as code folding aids
     set statusline=\ \ %F\ %m%r%=\[%l/%L,%2c/%v\]\ \[0x%B,0x%O\]\ [%{&fileencoding}]\ %w%h
@@ -785,7 +785,6 @@ endfunction
 " }}}
 
 let cfgSettings = {}
-"let cfgSettings.FontFace = "Droid Sans Mono Dotted"
 let cfgSettings.FontFace = "Cousine"
 let cfgSettings.FontSize = 12
 let cfgSettings.FontFacePrint = cfgSettings.FontFace
